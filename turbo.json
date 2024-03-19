@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": [
+    "**/.env"
+  ],
+  "globalEnv": [
+    "POSTGRES_URL"
+  ],
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
