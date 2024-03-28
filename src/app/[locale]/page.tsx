@@ -1,8 +1,8 @@
 import {getStaticParams} from "@/locales/server";
 import {setStaticParamsLocale} from "next-international/server";
 import {Header} from "@/components/Header";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Pricing} from "@/components/Pricing";
 
 export function generateStaticParams() {
     return getStaticParams();
@@ -17,136 +17,29 @@ export default function Page({
 
     return (
         <>
-            <Header/>
-            <div className={''}>
-
+            <div className="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                 aria-hidden="true">
+                <div
+                    className="relative left-0 aspect-square rounded-full -translate-y-1/4 bg-gradient-to-b from-primary from-20% to-transparent to-90% opacity-20"
+                />
             </div>
-            <Card>
-                <CardHeader>
-                    <CardTitle>Recent Sales</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <Table>
-                        <TableHeader>
-                            <TableRow>
-                                <TableHead>Customer</TableHead>
-                                <TableHead className="hidden xl:table-column">
-                                    Type
-                                </TableHead>
-                                <TableHead className="hidden xl:table-column">
-                                    Status
-                                </TableHead>
-                                <TableHead className="hidden xl:table-column">
-                                    Date
-                                </TableHead>
-                                <TableHead className="text-right">Amount</TableHead>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell>
-                                    <div className="font-medium">Liam Johnson</div>
-                                    <div className="hidden text-sm text-muted-foreground md:inline">
-                                        liam@example.com
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    Sale
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    <div className="text-xs">
-                                        Approved
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
-                                    2023-06-23
-                                </TableCell>
-                                <TableCell className="text-right">$250.00</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>
-                                    <div className="font-medium">Olivia Smith</div>
-                                    <div className="hidden text-sm text-muted-foreground md:inline">
-                                        olivia@example.com
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    Refund
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    <div className="text-xs">
-                                        Declined
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
-                                    2023-06-24
-                                </TableCell>
-                                <TableCell className="text-right">$150.00</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>
-                                    <div className="font-medium">Noah Williams</div>
-                                    <div className="hidden text-sm text-muted-foreground md:inline">
-                                        noah@example.com
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    Subscription
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    <div className="text-xs">
-                                        Approved
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
-                                    2023-06-25
-                                </TableCell>
-                                <TableCell className="text-right">$350.00</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>
-                                    <div className="font-medium">Emma Brown</div>
-                                    <div className="hidden text-sm text-muted-foreground md:inline">
-                                        emma@example.com
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    Sale
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    <div className="text-xs">
-                                        Approved
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
-                                    2023-06-26
-                                </TableCell>
-                                <TableCell className="text-right">$450.00</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>
-                                    <div className="font-medium">Liam Johnson</div>
-                                    <div className="hidden text-sm text-muted-foreground md:inline">
-                                        liam@example.com
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    Sale
-                                </TableCell>
-                                <TableCell className="hidden xl:table-column">
-                                    <div className="text-xs">
-                                        Approved
-                                    </div>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
-                                    2023-06-27
-                                </TableCell>
-                                <TableCell className="text-right">$550.00</TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                </CardContent>
-            </Card>
+            <Header/>
+            <div className={'text-center space-y-8 mt-32 w-2/3 mx-auto'}>
+                <h1 className={'text-7xl font-light'}>
+                    Build website in minutes without writing any code
+                </h1>
+                <h3 className={'text-xl text-accent-foreground'}>
+                    Midday provides you with greater insight into your business and automates the boring tasks, allowing
+                    you to focus on what you love to do instead.
+                </h3>
+                <div className={'flex space-x-4 w-max mx-auto'}>
+                    <Button size="lg">Start building</Button>
+                    <Button variant="secondary" size="lg">Try out now!</Button>
+                </div>
+            </div>
+            <main className={'mx-auto w-max space-y-12 mt-32'}>
+                <Pricing/>
+            </main>
         </>
     );
 }

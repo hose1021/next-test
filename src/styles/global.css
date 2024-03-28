@@ -1,4 +1,6 @@
 @import './ui.css';
+@import "@radix-ui/colors/grass.css";
+@import "@radix-ui/colors/grass-alpha.css";
 
 @tailwind base;
 @tailwind components;

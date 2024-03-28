@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { Provider } from "./provider";
+import type {ReactNode} from "react";
+import {Provider} from "./provider";
 
 export default function Layout({
 	params: { locale },
@@ -10,7 +10,7 @@ export default function Layout({
 }) {
 	return (
 		<Provider locale={locale}>
-			<main className="container mx-auto px-4 pt-4 overflow-hidden md:overflow-visible">
+			<main className="container mx-auto p-4">
 				{children}
 			</main>
 		</Provider>

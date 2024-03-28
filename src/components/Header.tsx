@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Header() {
     return (
         <>
-            <div className="flex justify-between items-center">
+            <div className={"flex justify-between items-center"}>
                 <h1 className="text-xl font-bold">Baku, Azerbaijan</h1>
 
                 <nav
