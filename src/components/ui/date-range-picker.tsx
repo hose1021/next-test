@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { DateRange } from "react-day-picker";
-import { cn } from "@/utils";
+import {cn} from "@/lib/utils";
 import { Button } from "./button";
 import { Calendar } from "./calendar";
 import { Icons } from "./icons";

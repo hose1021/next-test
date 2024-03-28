@@ -3,7 +3,7 @@
 import { endOfMonth, formatISO, isSameDay, startOfMonth } from "date-fns";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState } from "react";
-import { cn } from "@/utils";
+import {cn} from "@/lib/utils";
 import { Button } from "./button";
 
 const monthsNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];

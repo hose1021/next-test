@@ -6,7 +6,7 @@
     "build": "next build",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "next clean",
-    "dev": "next dev",
+    "dev": "next dev --experimental-https",
     "test": "next test",
     "jobs:dashboard": "turbo jobs --filter=@midday/dashboard",
     "format": "biome format --write ./src",
