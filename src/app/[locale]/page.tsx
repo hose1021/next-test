@@ -24,11 +24,12 @@ export default function Page({
                 />
             </div>
             <Header/>
-            <div className={'text-center space-y-8 mt-32 w-2/3 mx-auto'}>
-                <h1 className={'text-7xl font-light'}>
-                    Build website in minutes without writing any code
+            <div
+                className={'relative max-w-7xl text-center mx-auto flex flex-col items-center justify-center gap-12 px-8 py-52'}>
+                <h1 className={'text-6xl font-bold'}>
+                    Simple, Smarter, Not Harder
                 </h1>
-                <h3 className={'text-xl text-accent-foreground'}>
+                <h3 className={'w-2/3 mx-auto text-accent-foreground'}>
                     Midday provides you with greater insight into your business and automates the boring tasks, allowing
                     you to focus on what you love to do instead.
                 </h3>

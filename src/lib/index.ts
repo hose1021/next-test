@@ -1,13 +1,6 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
 export function stripSpecialCharacters(inputString: string) {
 	// Use a regular expression to replace all non-alphanumeric characters except hyphen, space, dot,and parentheses with an empty string
 	return inputString.replace(/[^a-zA-Z0-9\s.()-]/g, "");
-}
-
-export function cn(...inputs: ClassValue[]) {
-	return twMerge(clsx(inputs));
 }
 
 export function shuffle(array: any) {

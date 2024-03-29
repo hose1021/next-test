@@ -1,8 +1,8 @@
-import { createI18nMiddleware } from "next-international/middleware";
-import type { NextRequest } from "next/server";
+import {createI18nMiddleware} from "next-international/middleware";
+import type {NextRequest} from "next/server";
 
 const I18nMiddleware = createI18nMiddleware({
-	locales: ["en"],
+	locales: ["en", "ru"],
 	defaultLocale: "en",
 	urlMappingStrategy: "rewrite",
 });
@@ -13,6 +13,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
 	matcher: [
-		"/((?!.*\\.|api|_next/static|_next/image|favicon.ico|robots.txt|auth\\/).*)",
+		"/((?!.*\\.|api|_next/static|_next/image|favicon.ico|robots.txt\\/).*)",
 	],
 };
+
