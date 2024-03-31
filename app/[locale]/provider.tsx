@@ -2,15 +2,9 @@
 
 import type { ReactNode } from 'react';
 
-
-
 import { usePathname } from 'next/navigation';
 
-
-
 import { I18nProviderClient } from 'locales/client';
-
-
 
 import { ThemeProvider } from 'components/theme-provider';
 

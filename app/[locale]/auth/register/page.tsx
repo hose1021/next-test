@@ -1,17 +1,18 @@
 import Link from 'next/link';
 
-
-
 import { getStaticParams } from 'locales/server';
 import { setStaticParamsLocale } from 'next-international/server';
 
-
-
 import { Button } from 'components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from 'components/ui/card';
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from 'components/ui/card';
 import { Input } from 'components/ui/input';
 import { Label } from 'components/ui/label';
-
 
 export function generateStaticParams() {
     return getStaticParams();

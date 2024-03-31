@@ -1,15 +1,10 @@
 import type { ReactElement } from 'react';
 
-
-
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import Link from 'next/link';
 
-
-
 import 'styles/global.css';
-
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://midday.ai'),

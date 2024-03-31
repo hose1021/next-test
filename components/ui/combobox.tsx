@@ -3,17 +3,17 @@
 import * as React from 'react';
 import { useCallback, useRef, useState } from 'react';
 
-
-
 import { Command as CommandPrimitive } from 'cmdk';
 import { Loader2 } from 'lucide-react';
 
-
-
 import { cn } from '../utils/cn';
-import { CommandGroup, CommandInput, CommandItem, CommandList } from './command';
+import {
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+} from './command';
 import { Icons } from './icons';
-
 
 export type Option = Record<'id' | 'name', string> & Record<string, string>;
 

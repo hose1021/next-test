@@ -16,6 +16,7 @@ import { refreshInChromeExt } from 'lib/chrome-extension';
 
 import SettingsCard from './settings-card';
 
+
 export default function DeleteData() {
     const { authUser } = useAuth();
     const { user } = useUser();

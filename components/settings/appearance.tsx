@@ -10,11 +10,10 @@ import { setImagePreview } from 'app/actions/user';
 import { useUser } from 'components/context/user';
 import { Switch } from 'components/ui/switch';
 
-import { User } from 'types/data';
-
 import PlanTooltip from './plan-tooltip';
 import SettingsCard from './settings-card';
 import { ThemeToggle } from './theme-toggle';
+
 
 export default function Appearance() {
     const { user } = useUser();

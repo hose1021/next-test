@@ -14,6 +14,7 @@ import { refreshInChromeExt } from 'lib/chrome-extension';
 
 import SettingsCard from './settings-card';
 
+
 export default function DeleteAccount() {
     const { authUser, supabase } = useAuth();
     const [open, setOpen] = useState(false);

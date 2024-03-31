@@ -8,7 +8,6 @@ import { SwitchLanguage } from 'components/switch-language';
 import { SwitchTheme } from 'components/switch-theme';
 import { Button } from 'components/ui/button';
 
-
 export function Header() {
     let t = useI18n();
 

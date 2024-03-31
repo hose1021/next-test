@@ -2,13 +2,17 @@
 
 import { Loader2 } from 'lucide-react';
 
-
-
 import { Icons } from './icons';
 import { Progress } from './progress';
-import { Toast, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport } from './toast';
+import {
+    Toast,
+    ToastClose,
+    ToastDescription,
+    ToastProvider,
+    ToastTitle,
+    ToastViewport,
+} from './toast';
 import { useToast } from './use-toast';
-
 
 export function Toaster() {
     const { toasts } = useToast();
@@ -17,14 +21,14 @@ export function Toaster() {
         <ToastProvider>
             {toasts.map(
                 ({
-                     id,
-                     title,
-                     description,
-                     progress = 0,
-                     action,
-                     footer,
-                     ...props
-                 }) => {
+                    id,
+                    title,
+                    description,
+                    progress = 0,
+                    action,
+                    footer,
+                    ...props
+                }) => {
                     return (
                         <Toast key={id} {...props} className="flex flex-col">
                             <div className="flex w-full">
@@ -36,23 +40,34 @@ export function Toaster() {
                                                     {props.variant === 'ai' && (
                                                         <Icons.AI className="text-[#0064D9]" />
                                                     )}
-                                                    {props?.variant === 'success' && <Icons.Check />}
-                                                    {props?.variant === 'error' && (
+                                                    {props?.variant ===
+                                                        'success' && (
+                                                        <Icons.Check />
+                                                    )}
+                                                    {props?.variant ===
+                                                        'error' && (
                                                         <Icons.Error className="text-[#FF3638]" />
                                                     )}
-                                                    {props?.variant === 'progress' && (
+                                                    {props?.variant ===
+                                                        'progress' && (
                                                         <Loader2 className="h-4 w-4 animate-spin" />
                                                     )}
                                                 </div>
                                             )}
-                                            <div>{title && <ToastTitle>{title}</ToastTitle>}</div>
+                                            <div>
+                                                {title && (
+                                                    <ToastTitle>
+                                                        {title}
+                                                    </ToastTitle>
+                                                )}
+                                            </div>
                                         </div>
 
                                         <div>
                                             {props?.variant === 'progress' && (
                                                 <span className="text-sm text-[#878787]">
-                          {progress}%
-                        </span>
+                                                    {progress}%
+                                                </span>
                                             )}
                                         </div>
                                     </div>
@@ -65,14 +80,18 @@ export function Toaster() {
                                     )}
 
                                     {description && (
-                                        <ToastDescription>{description}</ToastDescription>
+                                        <ToastDescription>
+                                            {description}
+                                        </ToastDescription>
                                     )}
                                 </div>
                                 {action}
                                 <ToastClose />
                             </div>
 
-                            <div className="w-full flex justify-end">{footer}</div>
+                            <div className="w-full flex justify-end">
+                                {footer}
+                            </div>
                         </Toast>
                     );
                 },

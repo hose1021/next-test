@@ -2,19 +2,16 @@
 
 import * as React from 'react';
 
-
-
-import useEmblaCarousel, { type EmblaCarouselType as CarouselApi, type EmblaOptionsType as CarouselOptions, type EmblaPluginType as CarouselPlugin } from 'embla-carousel-react';
-
-
+import useEmblaCarousel, {
+    type EmblaCarouselType as CarouselApi,
+    type EmblaOptionsType as CarouselOptions,
+    type EmblaPluginType as CarouselPlugin,
+} from 'embla-carousel-react';
 
 import { cn } from 'lib/utils';
 
-
-
 import { Button } from './button';
 import { Icons } from './icons';
-
 
 type CarouselProps = {
     opts?: CarouselOptions;

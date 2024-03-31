@@ -14,6 +14,7 @@ import { formatDate } from 'lib/date';
 
 import { PaymentType, UserModified } from 'types/data';
 
+
 declare global {
     interface Window {
         createLemonSqueezy: any;

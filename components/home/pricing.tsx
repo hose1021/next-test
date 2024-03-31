@@ -12,6 +12,7 @@ import PlanTooltip from 'components/settings/plan-tooltip';
 import { Switch } from 'components/ui/switch';
 import { TooltipProvider } from 'components/ui/tooltip';
 
+
 export default function Pricing() {
     const [planYearly, setYearly] = useState(true);
 

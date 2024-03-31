@@ -1,14 +1,9 @@
 import React from 'react';
 
-
-
 import type { Metadata, Viewport } from 'next';
 import { Noto_Sans } from 'next/font/google';
 
-
-
 import 'styles/global.css';
-
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://hire.az'),

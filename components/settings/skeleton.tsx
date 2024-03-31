@@ -1,7 +1,5 @@
 'use client';
 
-import { Avatar, AvatarFallback } from '@radix-ui/react-avatar';
-
 import { Skeleton } from 'components/ui/skeleton';
 
 import SettingsCard from './settings-card';

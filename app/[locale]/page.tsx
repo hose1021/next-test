@@ -1,18 +1,19 @@
 import { getStaticParams } from 'locales/server';
 import { setStaticParamsLocale } from 'next-international/server';
 
-
-
 import { Header } from 'components/header';
 import Pricing from 'components/home/pricing';
 import { Button } from 'components/ui/button';
-
 
 export function generateStaticParams() {
     return getStaticParams();
 }
 
-export default function Page({ params: { locale } }: { params: { locale: string } }) {
+export default function Page({
+    params: { locale },
+}: {
+    params: { locale: string };
+}) {
     setStaticParamsLocale(locale);
 
     return (
