@@ -1,10 +1,20 @@
-"use client";
+'use client';
 
-import {endOfMonth, formatISO, isSameDay, startOfMonth} from "date-fns";
-import {ChevronLeft, ChevronRight} from "lucide-react";
-import React, {useState} from "react";
-import {cn} from "@/lib/utils";
-import {Button} from "./button";
+import React, { useState } from 'react';
+
+
+
+import { endOfMonth, formatISO, isSameDay, startOfMonth } from 'date-fns';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+
+
+import { cn } from 'lib/utils';
+
+
+
+import { Button } from './button';
+
 
 const monthsNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
@@ -18,7 +28,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
     setDate: (range?: DateRange) => void;
 };
 
-export const MonthRangePicker = ({date, setDate}: Props) => {
+export const MonthRangePicker = ({ date, setDate }: Props) => {
     const [yearOffset, setYearOffset] = useState<number>(-1);
 
     const today = new Date();
@@ -77,25 +87,25 @@ export const MonthRangePicker = ({date, setDate}: Props) => {
         if (!date?.from || date?.to) {
             setDate({
                 from: formatISO(startOfMonth(new Date(selectedDate)), {
-                    representation: "date",
+                    representation: 'date',
                 }),
                 to: null,
             });
         } else if (fromDate && selectedDate < fromDate) {
             setDate({
                 from: formatISO(startOfMonth(new Date(selectedDate)), {
-                    representation: "date",
+                    representation: 'date',
                 }),
                 to: date?.from
                     ? formatISO(endOfMonth(new Date(date.from)), {
-                        representation: "date",
-                    })
+                          representation: 'date',
+                      })
                     : null,
             });
         } else {
             setDate({
                 to: formatISO(endOfMonth(new Date(selectedDate)), {
-                    representation: "date",
+                    representation: 'date',
                 }),
             });
         }
@@ -115,29 +125,29 @@ export const MonthRangePicker = ({date, setDate}: Props) => {
                 type="button"
                 key={month}
                 className={cn(
-                    "!w-[40px] !h-[40px] m-0 pr-[60px] rounded-none mb-1.5 bg-transparent",
-                    isStart && toDate && "bg-secondary rounded-l-full",
-                    isEnd && "bg-secondary rounded-r-full pr-0",
-                    isRange && "bg-secondary",
+                    '!w-[40px] !h-[40px] m-0 pr-[60px] rounded-none mb-1.5 bg-transparent',
+                    isStart && toDate && 'bg-secondary rounded-l-full',
+                    isEnd && 'bg-secondary rounded-r-full pr-0',
+                    isRange && 'bg-secondary',
                 )}
                 onClick={() => handleMonthClick(monthStart)}
             >
                 <div
                     className={cn(
-                        "flex items-center justify-center !w-[40px] !h-[40px] !text-xs font-medium hover:rounded-full border border-transparent hover:border-primary",
-                        isSelectedDate && "bg-primary text-primary-foreground",
+                        'flex items-center justify-center !w-[40px] !h-[40px] !text-xs font-medium hover:rounded-full border border-transparent hover:border-primary',
+                        isSelectedDate && 'bg-primary text-primary-foreground',
                         isSelectedDate &&
-                        "rounded-full hover:bg-primary hover:text-primary-foreground",
+                            'rounded-full hover:bg-primary hover:text-primary-foreground',
 
-                        isStart && "",
-                        isEnd && "",
+                        isStart && '',
+                        isEnd && '',
                     )}
                 >
-					<span>
-						{new Intl.DateTimeFormat("en-US", {
-                            month: "short",
+                    <span>
+                        {new Intl.DateTimeFormat('en-US', {
+                            month: 'short',
                         }).format(monthStart)}
-					</span>
+                    </span>
                 </div>
             </button>
         );
@@ -154,7 +164,7 @@ export const MonthRangePicker = ({date, setDate}: Props) => {
                     variant="ghost"
                     size="icon"
                 >
-                    <ChevronLeft className="w-[18px]"/>
+                    <ChevronLeft className="w-[18px]" />
                 </Button>
 
                 <Button
@@ -162,7 +172,7 @@ export const MonthRangePicker = ({date, setDate}: Props) => {
                     variant="ghost"
                     size="icon"
                 >
-                    <ChevronRight className="w-[18px]"/>
+                    <ChevronRight className="w-[18px]" />
                 </Button>
             </div>
 

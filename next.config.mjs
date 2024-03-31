@@ -15,9 +15,6 @@ const nextConfig = {
         deviceSizes: [640, 750],
         minimumCacheTTL: 60,
     },
-    experimental: {
-        ppr: true,
-    },
     async headers() {
         return [
             {source: '/(.*)', headers: securityHeaders},
@@ -27,11 +24,10 @@ const nextConfig = {
 };
 
 const ContentSecurityPolicy = `
-    default-src 'self' bmrk.cc;
+    default-src 'self' hire.az;
     script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.lemonsqueezy.com;
     style-src 'self' 'unsafe-inline';
     img-src * blob: data:;
-    frame-src 'self' bmrkcc.lemonsqueezy.com;
     media-src 'self';
     connect-src *;
     font-src 'self';
@@ -77,7 +73,7 @@ const securityHeaders = [
 
 const corsHeaders = [
     {key: 'Access-Control-Allow-Credentials', value: 'true'},
-    {key: 'Access-Control-Allow-Origin', value: 'https://bmrk.cc'},
+    { key: 'Access-Control-Allow-Origin', value: 'https://hire.az' },
     {key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT'},
     {
         key: 'Access-Control-Allow-Headers',

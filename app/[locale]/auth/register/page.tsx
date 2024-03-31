@@ -1,20 +1,23 @@
-import {Button} from "@/components/ui/button"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle,} from "@/components/ui/card"
-import {Input} from "@/components/ui/input"
-import {Label} from "@/components/ui/label"
-import {setStaticParamsLocale} from "next-international/server";
-import {getStaticParams} from "@/locales/server";
-import Link from "next/link";
+import Link from 'next/link';
+
+
+
+import { getStaticParams } from 'locales/server';
+import { setStaticParamsLocale } from 'next-international/server';
+
+
+
+import { Button } from 'components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from 'components/ui/card';
+import { Input } from 'components/ui/input';
+import { Label } from 'components/ui/label';
+
 
 export function generateStaticParams() {
     return getStaticParams();
 }
 
-export default function Page({
-                                 params: {locale},
-                             }: {
-    params: { locale: string };
-}) {
+export default function Page({ params: { locale } }: { params: { locale: string } }) {
     setStaticParamsLocale(locale);
 
     return (
@@ -40,27 +43,27 @@ export default function Page({
                         <div className="flex items-center">
                             <Label htmlFor="password">Password</Label>
                         </div>
-                        <Input id="password" type="password" required/>
+                        <Input id="password" type="password" required />
                     </div>
                     <Button type="submit" className="w-full">
                         Register
                     </Button>
                     <div className="flex items-center gap-4">
-                        <hr className="w-full"/>
+                        <hr className="w-full" />
                         <span className="text-sm text-gray-500">or</span>
-                        <hr className="w-full"/>
+                        <hr className="w-full" />
                     </div>
                     <Button variant="outline" className="w-full">
                         Register with Google
                     </Button>
                 </div>
                 <div className="mt-4 text-center text-sm">
-                    Already have an account?{" "}
+                    Already have an account?{' '}
                     <Link href={'/auth/login'} className="underline">
                         Login
                     </Link>
                 </div>
             </CardContent>
         </Card>
-    )
+    );
 }

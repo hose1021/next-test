@@ -1,45 +1,53 @@
-import "@/styles/global.css";
-import type {Metadata} from "next";
-import type {ReactElement} from "react";
-import {Noto_Sans} from "next/font/google";
-import {cn} from "lib/utils";
+import React from 'react';
+
+
+
+import type { Metadata, Viewport } from 'next';
+import { Noto_Sans } from 'next/font/google';
+
+
+
+import 'styles/global.css';
+
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://midday.ai"),
-    title: "Midday | Run your business smarter",
+    metadataBase: new URL('https://hire.az'),
+    title: 'Hire.az',
     description:
-        "Midday provides you with greater insight into your business and automates the boring tasks, allowing you to focus on what you love to do instead.",
+        'Testing the metadata for the Hire.az website. Hire.az is a job board for the modern web.',
 };
 
 const notoSans = Noto_Sans({
-    subsets: ["latin"],
-    variable: "--font-sans",
+    subsets: ['latin'],
+    variable: '--font-sans',
 });
 
-export const viewport = {
+export const viewport: Viewport = {
     themeColor: [
-        {media: "(prefers-color-scheme: light)"},
-        {media: "(prefers-color-scheme: dark)"},
+        { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+        { media: '(prefers-color-scheme: dark)', color: '#000000' },
     ],
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    viewportFit: 'cover',
 };
 
-export default function Layout({
-                                   children,
-                                   params: {locale = "en"},
-                               }: {
-    children: ReactElement;
+export default async function RootLayout({
+    children,
+    params: { locale = 'en' },
+}: Readonly<{
+    children: React.ReactNode;
     params: { locale: string };
-}) {
+}>) {
     return (
-        <html lang={locale} suppressHydrationWarning>
-        <body
-            className={cn(
-                `${notoSans.className}`,
-                "bg-background relative flex min-h-screen flex-col",
-            )}
-        >
-        {children}
-        </body>
+        <html lang={locale} className="h-full" suppressHydrationWarning>
+            <body
+                className={`${notoSans.className} bg-background relative flex min-h-screen flex-col`}
+            >
+                {children}
+            </body>
         </html>
     );
 }

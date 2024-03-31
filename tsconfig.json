@@ -27,6 +27,12 @@
       ],
       "types/*": [
         "./types/*"
+      ],
+      "locales/*": [
+        "./locales/*"
+      ],
+      "styles/*": [
+        "./styles/*"
       ]
     },
     "plugins": [

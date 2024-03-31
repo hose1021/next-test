@@ -1,94 +1,10 @@
-import {ArchiveIcon} from "@radix-ui/react-icons";
-import {Settings} from "lucide-react";
-import {FaXTwitter} from "react-icons/fa6";
-import {FiGithub} from "react-icons/fi";
-import {
-    MdAdd,
-    MdApartment,
-    MdArrowBack,
-    MdArrowLeft,
-    MdArrowRight,
-    MdAutoAwesome,
-    MdBarChart,
-    MdCelebration,
-    MdChevronLeft,
-    MdChevronRight,
-    MdClose,
-    MdCreateNewFolder,
-    MdDescription,
-    MdDesk,
-    MdDevices,
-    MdDriveFileMove,
-    MdDynamicForm,
-    MdErrorOutline,
-    MdExpandMore,
-    MdFastfood,
-    MdFence,
-    MdFileUpload,
-    MdFlightTakeoff,
-    MdFolder,
-    MdFolderSpecial,
-    MdFolderZip,
-    MdHomeWork,
-    MdInventory2,
-    MdMoreHoriz,
-    MdOutlineAccountBalanceWallet,
-    MdOutlineArrowDownward,
-    MdOutlineArrowForward,
-    MdOutlineBrokenImage,
-    MdOutlineCancel,
-    MdOutlineCategory,
-    MdOutlineContentCopy,
-    MdOutlineCreateNewFolder,
-    MdOutlineDashboardCustomize,
-    MdOutlineDelete,
-    MdOutlineDescription,
-    MdOutlineDifference,
-    MdOutlineEmail,
-    MdOutlineExitToApp,
-    MdOutlineFace,
-    MdOutlineFileDownload,
-    MdOutlineForwardToInbox,
-    MdOutlineHandyman,
-    MdOutlineHourglassTop,
-    MdOutlineInbox,
-    MdOutlineInsertPhoto,
-    MdOutlineIntegrationInstructions,
-    MdOutlineInventory2,
-    MdOutlineListAlt,
-    MdOutlineLocalAtm,
-    MdOutlineMoreVert,
-    MdOutlineMoveToInbox,
-    MdOutlineNotificationsNone,
-    MdOutlineOpenInFull,
-    MdOutlineQuestionAnswer,
-    MdOutlineSettings,
-    MdOutlineTask,
-    MdOutlineTimer,
-    MdOutlineToll,
-    MdOutlineTune,
-    MdOutlineVisibility,
-    MdPause,
-    MdPauseCircle,
-    MdPayments,
-    MdPeople,
-    MdPerson,
-    MdPictureAsPdf,
-    MdPlayArrow,
-    MdPlayCircle,
-    MdRefresh,
-    MdRemove,
-    MdRuleFolder,
-    MdSave,
-    MdSearch,
-    MdSecurity,
-    MdSensors,
-    MdSignalCellularAlt,
-    MdTopic,
-    MdTrendingDown,
-    MdTrendingUp,
-} from "react-icons/md";
-import {PiDiscordLogo} from "react-icons/pi";
+import { ArchiveIcon } from '@radix-ui/react-icons';
+import { Settings } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FiGithub } from 'react-icons/fi';
+import { MdAdd, MdApartment, MdArrowBack, MdArrowLeft, MdArrowRight, MdAutoAwesome, MdBarChart, MdCelebration, MdChevronLeft, MdChevronRight, MdClose, MdCreateNewFolder, MdDescription, MdDesk, MdDevices, MdDriveFileMove, MdDynamicForm, MdErrorOutline, MdExpandMore, MdFastfood, MdFence, MdFileUpload, MdFlightTakeoff, MdFolder, MdFolderSpecial, MdFolderZip, MdHomeWork, MdInventory2, MdMoreHoriz, MdOutlineAccountBalanceWallet, MdOutlineArrowDownward, MdOutlineArrowForward, MdOutlineBrokenImage, MdOutlineCancel, MdOutlineCategory, MdOutlineContentCopy, MdOutlineCreateNewFolder, MdOutlineDashboardCustomize, MdOutlineDelete, MdOutlineDescription, MdOutlineDifference, MdOutlineEmail, MdOutlineExitToApp, MdOutlineFace, MdOutlineFileDownload, MdOutlineForwardToInbox, MdOutlineHandyman, MdOutlineHourglassTop, MdOutlineInbox, MdOutlineInsertPhoto, MdOutlineIntegrationInstructions, MdOutlineInventory2, MdOutlineListAlt, MdOutlineLocalAtm, MdOutlineMoreVert, MdOutlineMoveToInbox, MdOutlineNotificationsNone, MdOutlineOpenInFull, MdOutlineQuestionAnswer, MdOutlineSettings, MdOutlineTask, MdOutlineTimer, MdOutlineToll, MdOutlineTune, MdOutlineVisibility, MdPause, MdPauseCircle, MdPayments, MdPeople, MdPerson, MdPictureAsPdf, MdPlayArrow, MdPlayCircle, MdRefresh, MdRemove, MdRuleFolder, MdSave, MdSearch, MdSecurity, MdSensors, MdSignalCellularAlt, MdTopic, MdTrendingDown, MdTrendingUp } from 'react-icons/md';
+import { PiDiscordLogo } from 'react-icons/pi';
+
 
 export const Icons = {
     LogoSmall: (props: any) => (
@@ -193,7 +109,7 @@ export const Icons = {
             </g>
             <defs>
                 <clipPath id="a">
-                    <path fill="currentColor" d="M0 0h20v20H0z"/>
+                    <path fill="currentColor" d="M0 0h20v20H0z" />
                 </clipPath>
             </defs>
         </svg>

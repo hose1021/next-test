@@ -1,19 +1,21 @@
-"use client";
+'use client';
 
-import {Command as CommandPrimitive} from "cmdk";
-import {Loader2} from "lucide-react";
-import * as React from "react";
-import {useCallback, useRef, useState} from "react";
-import {cn} from "../utils/cn";
-import {
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
-} from "./command";
-import {Icons} from "./icons";
+import * as React from 'react';
+import { useCallback, useRef, useState } from 'react';
 
-export type Option = Record<"id" | "name", string> & Record<string, string>;
+
+
+import { Command as CommandPrimitive } from 'cmdk';
+import { Loader2 } from 'lucide-react';
+
+
+
+import { cn } from '../utils/cn';
+import { CommandGroup, CommandInput, CommandItem, CommandList } from './command';
+import { Icons } from './icons';
+
+
+export type Option = Record<'id' | 'name', string> & Record<string, string>;
 
 type AutoCompleteProps = {
     options: Option[];
@@ -31,24 +33,24 @@ type AutoCompleteProps = {
 };
 
 export const Combobox = ({
-                             options,
-                             placeholder,
-                             value,
-                             onSelect,
-                             onRemove,
-                             onCreate,
-                             disabled,
-                             className,
-                             classNameList,
-                             isLoading = false,
-                             onValueChange,
-                         }: AutoCompleteProps) => {
+    options,
+    placeholder,
+    value,
+    onSelect,
+    onRemove,
+    onCreate,
+    disabled,
+    className,
+    classNameList,
+    isLoading = false,
+    onValueChange,
+}: AutoCompleteProps) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [isOpen, setOpen] = useState(false);
     const [selected, setSelected] = useState<Option | undefined>(
         value as Option,
     );
-    const [inputValue, setInputValue] = useState<string>(value?.name || "");
+    const [inputValue, setInputValue] = useState<string>(value?.name || '');
 
     const handleOnValueChange = (value: string) => {
         setInputValue(value);
@@ -63,7 +65,7 @@ export const Combobox = ({
 
     const handleOnRemove = () => {
         setSelected(undefined);
-        setInputValue("");
+        setInputValue('');
         onRemove?.();
     };
 
@@ -97,7 +99,7 @@ export const Combobox = ({
     return (
         <CommandPrimitive className="w-full">
             <div className="flex items-center w-full relative">
-                <Icons.Search className="w-[22px] h-[22px] absolute left-4 pointer-events-none"/>
+                <Icons.Search className="w-[22px] h-[22px] absolute left-4 pointer-events-none" />
 
                 <CommandInput
                     ref={inputRef}
@@ -111,7 +113,7 @@ export const Combobox = ({
                 />
 
                 {isLoading && (
-                    <Loader2 className="w-[20px] h-[20px] absolute right-4 animate-spin text-dark-gray"/>
+                    <Loader2 className="w-[20px] h-[20px] absolute right-4 animate-spin text-dark-gray" />
                 )}
 
                 {!isLoading && selected && (
@@ -130,12 +132,12 @@ export const Combobox = ({
                     {inputValue?.length > 0 && (
                         <CommandGroup
                             className={cn(
-                                "bg-background absolute z-10 w-full max-h-[250px] overflow-auto py-2 border rounded-xl",
+                                'bg-background absolute z-10 w-full max-h-[250px] overflow-auto py-2 border rounded-xl',
                                 classNameList,
                             )}
                         >
                             {options.map(
-                                ({component: Component, ...option}) => {
+                                ({ component: Component, ...option }) => {
                                     return (
                                         <CommandItem
                                             key={option.id}
@@ -150,7 +152,7 @@ export const Combobox = ({
                                             className="flex items-center gap-2 w-full"
                                         >
                                             {Component ? (
-                                                <Component/>
+                                                <Component />
                                             ) : (
                                                 option.name
                                             )}

@@ -1,6 +1,6 @@
 export function stripSpecialCharacters(inputString: string) {
     // Use a regular expression to replace all non-alphanumeric characters except hyphen, space, dot,and parentheses with an empty string
-    return inputString.replace(/[^a-zA-Z0-9\s.()-]/g, "");
+    return inputString.replace(/[^a-zA-Z0-9\s.()-]/g, '');
 }
 
 export function shuffle(array: any) {
@@ -12,8 +12,8 @@ export function shuffle(array: any) {
 }
 
 export enum FileType {
-    Pdf = "application/pdf",
-    Heic = "image/heic",
+    Pdf = 'application/pdf',
+    Heic = 'image/heic',
 }
 
 export const isSupportedFilePreview = (type: FileType) => {
@@ -25,7 +25,7 @@ export const isSupportedFilePreview = (type: FileType) => {
         return false;
     }
 
-    if (type?.startsWith("image")) {
+    if (type?.startsWith('image')) {
         return true;
     }
 
